@@ -30,7 +30,7 @@ const UserTable: React.FC<UserTableProps> = ({ users, highlightOldest }) => {
       const oldestUsers = highlightOldest ? getOldestUserPerCity() : {};
   
     return (
-    <div>
+    <div className='usertableContainer'>
     
     <table>
     <thead>

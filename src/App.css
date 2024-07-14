@@ -67,15 +67,13 @@
     width: 100%;
     /* margin: 10px auto;
     padding: 20px; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 16px;
     background-color: #f9f9f9;
   }
 
   .searchbarContainer{
 	display: flex;
-	
-	
 	flex-direction: column;
 	align-items: flex-start;
   }
@@ -89,30 +87,40 @@
 	flex-direction: row;
 	align-items: flex-start;
   }
+
+
 .container2{
-display: flex;
-justify-content: center;
+	display: flex;
+	/* justify-content: center; */
     align-items: center;
 	
-    width: 100%;
-    /* margin: 10px auto;
-    padding: 20px; */
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
     border: 1px solid black;
     border-radius: 16px;
-    background-color: #f9f9f9;
 }
+
+.usertableContainer{
+    background-color: #f9f9f9;
+	width: 100%;
+	overflow-y: scroll; 
+	max-height: 300px;
+}
+
   input, select {
 	margin: 10px;
   }
 
   table {
-	width: 100%;
+	width: 90%;
 	border-collapse: collapse;
-	border-spacing: 100px;
+	margin: 10px;
+	/* border-spacing: 300px; */
   }
   
   th, td {
-	border: 1px solid black;
+	/* border: 1px solid white; */
 	padding: 8px;
 	gap: 5rem;
 	text-align: left;
@@ -131,14 +139,7 @@ justify-content: center;
 
 	border: 1px solid black;
 }
-
-.container1 {
-	display: flex;
-	flex-direction: row;
-	gap: 0.5rem;
-
-	border: 1px solid black;
-} */
+*/
 
 .read-the-docs {
 	color: #888;
