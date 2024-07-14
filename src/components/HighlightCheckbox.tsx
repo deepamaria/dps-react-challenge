@@ -1,12 +1,17 @@
 import React from 'react';
 
-const HighlightCheckbox: React.FC = () => {
+interface HighlightCheckboxProps {
+    onChange: (highlight: boolean) => void;
+  }
+  
+const HighlightCheckbox: React.FC<HighlightCheckboxProps> = ({ onChange }) => {
   return (
     <div>
         <label>
       Highlight oldest per city
       <input
         type="checkbox"
+        onChange={(e) => onChange(e.target.checked)}
       />
       </label>
     </div>
