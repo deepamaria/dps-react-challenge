@@ -35,13 +35,25 @@
 
 .card {
 	padding: 2em;
+
+	border: 1px solid black;
 }
 
 .home-card {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+
+	border: 1px solid black;
 }
+
+/* .container1 {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+
+	border: 1px solid black;
+} */
 
 .read-the-docs {
 	color: #888;
