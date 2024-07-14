@@ -28,6 +28,7 @@ interface User {
 
 const App: React.FC = () => {
 
+	// states for each feature and users 
 	const [users, setUsers] = useState<User[]>([]);
 
 	const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
@@ -38,6 +39,7 @@ const App: React.FC = () => {
 
 	const [highlightOldest, setHighlightOldest] = useState(false);
 
+	// code to fetch from API endpoint to get json data
 	useEffect(() => {
 		fetch('https://dummyjson.com/users')
 		  .then(response => response.json())
@@ -69,7 +71,6 @@ return (
 						<div className='container1'>
 
 						{/* Create  Components for searchbar, Dropdown, Checkbox */}
-						
 		
 						<SearchBar onSearch={setSearchTerm} />
 						<DropDown onSelect={setSelectedCity} />
