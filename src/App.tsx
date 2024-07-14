@@ -8,6 +8,7 @@ import './App.css';
 
 //  Define the User Interface
 interface User {
+	id: number;
 	name: string;
 	city: string;
 	birthday: string;
