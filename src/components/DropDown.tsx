@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 interface DropdownProps {
     onSelect: (city: string) => void;
@@ -13,7 +13,15 @@ const DropDown: React.FC<DropdownProps> = ({ onSelect }) => {
   
     const [cities, setCities] = useState<string[]>([]);
 
-    
+    useEffect(() => {
+        fetch('https://dummyjson.com/users')
+          .then(response => response.json())
+          .then(data => {
+            const citySet = new Set(data.users.map((user: any) => user.address.city));
+            setCities(Array.from(citySet));
+            // setCities(data.users.map((user: any) => user.address.city));
+          });
+      }, []);
   
     return (
     <div className='dropdownContainer'>
