@@ -49,7 +49,7 @@ const UserTable: React.FC<UserTableProps> = ({ users, highlightOldest }) => {
           </tr>
         ))}
     </tbody>
-    
+
     </table>
     </div>
   );
