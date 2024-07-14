@@ -1,6 +1,9 @@
 import React from 'react';
 // import dpsLogo from './assets/DPS.svg';
 import SearchBar from './components/SearchBar';
+import DropDown from './components/DropDown';
+import HighlightCheckbox from './components/HighlightCheckbox';
+import UserTable from './components/UserTable';
 import './App.css';
 
 //  Define the User Interface
@@ -28,7 +31,7 @@ return (
 
 					{/* Create  Components for searchbar, Dropdown checkbos */}
 					<SearchBar />
-					<Dropdown />
+					<DropDown />
 					<HighlightCheckbox />
 					<UserTable />	
 				</div>
