@@ -28,7 +28,7 @@ body {
 	place-items: center;
 	/* min-width: 320px; */
 
-	min-width: 95vw;
+	min-width: 100vw;
 	min-height: 100vh;
 }
 
@@ -41,7 +41,7 @@ button,
 input,
 textarea,
 select {
-	border: 1px solid transparent;
+	/* border: 1px solid transparent; */
     border: 1px solid black; 
 	padding: 0.6em 1.2em;
 	border-radius: 12px;
@@ -61,7 +61,7 @@ select:hover {
 	border: 1px solid #646cff;
 }
 
-select {
+/* select {
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -103,7 +103,7 @@ textarea {
 input:focus,
 textarea:focus {
 	border: 1px solid #646cff;
-}
+} */
 
 @media (prefers-color-scheme: light) {
 	:root {

@@ -39,12 +39,22 @@ const App: React.FC = () => {
 return (
 		<>
 				<div className='App'>
+					<div className='mainContainer'>
+					
+						<div className='container1'>
 
-					{/* Create  Components for searchbar, Dropdown checkbos */}
-					<SearchBar />
-					<DropDown />
-					<HighlightCheckbox onChange={setHighlightOldest} />
-					<UserTable users={filteredUsers} highlightOldest={highlightOldest} />	
+						{/* Create  Components for searchbar, Dropdown, Checkbox */}
+						
+		
+						<SearchBar onSearch={setSearchTerm} />
+						<DropDown onSelect={setSelectedCity} />
+						<HighlightCheckbox onChange={setHighlightOldest} />
+						</div>
+						
+						<div className='container2'>
+						<UserTable users={filteredUsers} highlightOldest={highlightOldest} />	
+						</div>
+					</div>			
 				</div>
 		</>
 			

@@ -8,7 +8,10 @@ const cities = ['New York', 'Jacksonville', 'Washington', 'Dallas', 'Columbus'];
 
 const DropDown: React.FC<DropdownProps> = ({ onSelect }) => {
   return (
-    <div>
+    <div className='dropdownContainer'>
+        <label>
+            City
+        </label>
         <select onChange={(e) => onSelect(e.target.value)}>
             <option value="">Select city</option>
             {cities.map(city => (
