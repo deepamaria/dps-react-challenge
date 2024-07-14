@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 interface DropdownProps {
     onSelect: (city: string) => void;
 }
+// Dummy array created for testing
+// const cities = ['New York', 'Jacksonville', 'Washington', 'Dallas', 'Columbus'];
 
-const cities = ['New York', 'Jacksonville', 'Washington', 'Dallas', 'Columbus'];
+// Display cities in Dropdown from the json file 
+
 
 const DropDown: React.FC<DropdownProps> = ({ onSelect }) => {
-  return (
+  
+    const [cities, setCities] = useState<string[]>([]);
+
+    
+  
+    return (
     <div className='dropdownContainer'>
         <label>
             City
