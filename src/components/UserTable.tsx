@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface User {
+    id: number;
     name: string;
     city: string;
     birthday: string;
@@ -42,7 +43,7 @@ const UserTable: React.FC<UserTableProps> = ({ users, highlightOldest }) => {
 
     <tbody>
     {users.map(user => (
-          <tr key={user.name} style={{ backgroundColor: oldestUsers[user.city]?.name === user.name ? 'lightblue' : 'transparent' }}>
+          <tr key={user.id} style={{ backgroundColor: oldestUsers[user.city]?.id === user.id ? 'lightblue' : 'transparent' }}>
             <td>{user.name}</td>
             <td>{user.city}</td>
             <td>{user.birthday}</td>
