@@ -1,5 +1,6 @@
 import React from 'react';
-import dpsLogo from './assets/DPS.svg';
+// import dpsLogo from './assets/DPS.svg';
+import SearchBar from './components/SearchBar';
 import './App.css';
 
 //  Define the User Interface
@@ -18,18 +19,30 @@ const users: User[] = [
 	{ name: 'Terry Aki', city: 'Columbus', birthday: '5.11.1960' },
 ];
 
-function App() {
-	return (
+
+const App: React.FC = () => {
+
+return (
 		<>
-			<div>
-				 <a href="https://www.digitalproductschool.io/" target="_blank"> 
-					 <img src={dpsLogo} className="logo" alt="DPS logo" /> 
-				 </a> 
-			</div>
-			<div className="home-card">
-				{/* <p>Your solution for the challenge goes here 😊</p> */}
-			</div>
+				<div className='App'>
+
+					{/* Create  Components for searchbar, Dropdown checkbos */}
+					<SearchBar />
+					<Dropdown />
+					<HighlightCheckbox />
+					<UserTable />	
+				</div>
 		</>
+			
+			
+			//  <div>
+			//  	 <a href="https://www.digitalproductschool.io/" target="_blank"> 
+			//  		 <img src={dpsLogo} className="logo" alt="DPS logo" /> 
+			//  	 </a> 
+			//  </div>
+			//  <div className="home-card">
+			//  <p>Your solution for the challenge goes here 😊</p> 
+			//  </div> 
 	);
 }
 
