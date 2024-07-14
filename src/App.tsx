@@ -43,7 +43,7 @@ return (
 					{/* Create  Components for searchbar, Dropdown checkbos */}
 					<SearchBar />
 					<DropDown />
-					<HighlightCheckbox />
+					<HighlightCheckbox onChange={setHighlightOldest} />
 					<UserTable users={filteredUsers} highlightOldest={highlightOldest} />	
 				</div>
 		</>
