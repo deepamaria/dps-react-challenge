@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import dpsLogo from './assets/DPS.svg';
 import SearchBar from './components/SearchBar';
 import DropDown from './components/DropDown';
@@ -25,6 +25,17 @@ const users: User[] = [
 
 const App: React.FC = () => {
 
+	const [searchTerm, setSearchTerm] = useState('');
+
+	const [selectedCity, setSelectedCity] = useState('');
+
+	const [highlightOldest, setHighlightOldest] = useState(false);
+
+	const filteredUsers = users.filter(user => 
+		user.name.toLowerCase().includes(searchTerm.toLowerCase()) && 
+		(selectedCity ? user.city === selectedCity : true)
+	  );
+
 return (
 		<>
 				<div className='App'>
@@ -33,7 +44,7 @@ return (
 					<SearchBar />
 					<DropDown />
 					<HighlightCheckbox />
-					<UserTable />	
+					<UserTable users={filteredUsers} highlightOldest={highlightOldest} />	
 				</div>
 		</>
 			
