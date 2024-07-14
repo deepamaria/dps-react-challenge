@@ -41,16 +41,16 @@ button,
 input,
 textarea,
 select {
-	border-radius: 8px;
 	border: 1px solid transparent;
-	/* border: 1px solid black; */
+    border: 1px solid black; 
 	padding: 0.6em 1.2em;
+	border-radius: 12px;
 	font-size: 1em;
 	font-weight: 500;
 	font-family: inherit;
 	/* font-family: Inter; */
 
-	background-color: #1a1a1a;
+	/* background-color: #1a1a1a; */
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
